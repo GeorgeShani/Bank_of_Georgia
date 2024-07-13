@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Georgian:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="shortcut icon" href="./../images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./../styles/style.css">
+    <title>All Currencies | Bank of Georgia | JavaScript Project by Giorgi Shanidze</title>
+</head>
+<body>
+    <header>
+        <nav class="bog-navbar">
+            <div class="burger-menu">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <div class="logo-container">
+                <a href="./../index.html">
+                    <img src="./../images/logo.svg" class="BOG-logo">
+                </a>
+            </div>
+            <div class="navigation-links-container">
+                <ul class="nav-links-list">
+                    <li class="nav-link-item">
+                        <a href="./../index.html" class="nav-link">მთავარი</a>
+                    </li>
+                    <li class="nav-link-item">
+                        <a href="./currencies.html" class="nav-link">ვალუტის კურსები</a>
+                    </li>
+                    <li class="nav-link-item">
+                        <a href="./convert.html" class="nav-link">ვალუტის კონვერტაცია</a>
+                    </li>
+                    <li class="nav-link-item">
+                        <a href="./loan.html" class="nav-link">სესხის კალკულატორი</a>
+                    </li>
+                    <li class="nav-link-item">
+                        <a href="./about.html" class="nav-link">ჩვენს შესახებ</a>
+                    </li>
+                </ul>
+                <div class="logo-on-nav-bar">
+                    <img src="./../images/logo.svg" alt="">
+                    <p id="copy-info-nav-bar"></p>
+                </div>
+            </div>
+            <div class="log-in-button-container">
+                <button class="log-in-btn" onclick="goToLoginPage()" type="button">შესვლა</button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="all-currencies-main-container">
+            <div class="currencies-container-title">
+                <h2>ვალუტის კურსები</h2>
+            </div>
+            <div class="currencies-info-table">
+                <div class="table-header">
+                    <div class="section-titles-container">
+                        <div class="section-title">
+                            <p>ვალუტა</p>
+                        </div>
+                        <div class="section-title">
+                            <p>ოფიციალური კურსი</p>
+                        </div>
+                        <div class="section-title">
+                            <p>კომერციული კურსი</p>
+                        </div>
+                    </div>
+                    <div class="subsection-titles-container">
+                        <div class="cont-inner">
+                            <div class="subsection-title">
+                                <p>ყიდვა</p>
+                            </div>
+                            <div class="subsection-title">
+                                <p>გაყიდვა</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-body" id="currency-info-table"></div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="social-media-links">
+            <h3 class="title">დაგვიკავშირდი</h3>
+            <ul class="social-media-links-list">
+                <li class="social-media-link-item">
+                    <a target="_blank" href="https://www.facebook.com/BankOfGeorgia/" class="social-media-link">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                </li>
+                <li class="social-media-link-item">
+                    <a target="_blank" href="https://www.youtube.com/user/BankofGeorgiaTV" class="social-media-link">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </li>
+                <li class="social-media-link-item">
+                    <a target="_blank" href="https://www.instagram.com/bankofgeorgia/" class="social-media-link">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+                <li class="social-media-link-item">
+                    <a target="_blank" href="https://www.linkedin.com/company/bank-of-georgia/" class="social-media-link">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="contacts">
+            <p class="phone-contact"><a href="tel:+99532444444">(0 32) 444 444</a></p>
+            <p class="email-contact"><a href="mailto:customerservice@bog.ge">customerservice@bog.ge</a></p>
+        </div>
+        <div class="other-links">
+            <div class="store-links">
+                <h3 class="title">გადმოწერე მობილბანკი</h3>
+                <div class="store-link-items">
+                    <a class="store-link" target="_blank" href="https://play.google.com/store/apps/details?id=ge.bog.mobilebank">
+                        <img src="./../images/google-play.svg" alt="">
+                    </a>
+                    <a class="store-link" target="_blank" href="https://apps.apple.com/us/app/bank-of-georgia/id1159368231">
+                        <img src="./../images/app-store.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="subscription">
+                <h3 class="title">სიახლეების გამოწერა</h3>
+                <div class="email-input-container">
+                    <input type="email" id="email-input" placeholder="ელ-ფოსტა">
+                    <button type="button" id="subscribe-btn" onclick="displaySubscriptionMessage()">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </div>
+                <p id="subscription-message"></p>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="logo">
+                <img src="./../images/logo.svg">
+            </div>
+            <div class="copyright-info-container">
+                <p id="copyright-info"></p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/862b682ea5.js" crossorigin="anonymous"></script>
+    <script src="./../scripts/buttons.js"></script>
+    <script src="./../scripts/app.js"></script>
+</body>
+</html>

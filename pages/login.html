@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Georgian:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="shortcut icon" href="./../images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./../styles/style.css">
+    <title>Log In | Bank of Georgia | JavaScript Project by Giorgi Shanidze</title>
+</head>
+<body>
+    <div class="login-page-wrapper">
+        <div class="login-form-container">
+            <div class="form-nav-bar">
+                <a href="./../index.html">
+                    <img src="./../images/logo.svg">
+                </a>
+            </div>
+            <div class="form-container">
+                <div class="form-title">
+                    <h3>ავტორიზაცია</h3>
+                </div>
+                <form id="loginForm">
+                    <div class="inputs-container">
+                        <div class="username-and-pass">
+                            <div class="username-input-container">
+                                <input type="text" id="usernameInput" placeholder="მომხმარებლის სახელი">
+                                <p id="username-error-message"></p>
+                            </div>
+                            <div class="remember-checkbox">
+                                <input type="checkbox" id="rememberMe">
+                                <p>დამახსოვრება</p>
+                            </div>
+                            <div class="password-input-container">
+                                <input type="password" id="passwordInput" placeholder="პაროლი">
+                                <p id="password-error-message"></p>
+                            </div>
+                            <div class="forgot-data">
+                                <button type="button" onclick="updateData()" id="forgotData">დაგავიწყდა მონაცემები?</button>
+                            </div>
+                        </div>
+                        <div class="qr-code-container">
+                            <div class="image-container">
+                                <img src="./../images/Authorization-QR-code.svg" width="96" height="96">
+                                <button type="button" onclick="showQRInfo()" id="add-info-btn"><i class="fa-solid fa-circle-info"></i></button>
+                            </div>
+                            <p class="instructions-for-qr">ავტორიზაციისთვის დაასკანერე QR მობილბანკიდან</p>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button type="button" onclick="checkCredentials()" id="authorization-btn">შესვლა</button>
+                        <button type="button" onclick="goToRegistration()" id="registration-btn">რეგისტრაცია</button>
+                    </div>
+                </form>
+            </div>
+            <div class="form-footer">
+                <p id="form-copy-info"></p>
+                <ul class="policy-links-list">
+                    <li class="policy-link-item">
+                        <a target="_blank" href="https://conditions.bog.ge/ka/bank-service-conditions" class="policy-link">პირობები</a>
+                    </li>
+                    <li class="policy-link-item">
+                        <a target="_blank" href="https://bankofgeorgia.ge/ka/official-message" class="policy-link">შეტყობინებები</a>
+                    </li>
+                    <li class="policy-link-item">
+                        <a target="_blank" href="https://bankofgeorgia.ge/ka/anonymous-contact" class="policy-link">ცხელი ხაზი</a>
+                    </li>
+                    <li class="policy-link-item">
+                        <a target="_blank" href="https://bankofgeorgia.ge/ka/security-center" class="policy-link">უსაფრთხოების ცენტრი</a>
+                    </li>
+                    <li class="policy-link-item">
+                        <a target="_blank" href="https://bankofgeorgia.ge/ka/personalur-monacemta-dacva" class="policy-link">პერსონალურ მონაცემთა დაცვის პოლიტიკა</a>
+                    </li>
+                </ul>
+                <div class="social-media-footer-links-container">
+                    <ul class="social-media-footer-links-list">
+                        <li class="social-media-link-item">
+                            <a target="_blank" href="https://www.facebook.com/BankOfGeorgia/" class="social-media-link">
+                                <i class="fa-brands fa-square-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="social-media-link-item">
+                            <a target="_blank" href="https://www.youtube.com/user/BankofGeorgiaTV" class="social-media-link">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+                        </li>
+                        <li class="social-media-link-item">
+                            <a target="_blank" href="https://www.instagram.com/bankofgeorgia/" class="social-media-link">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="social-media-link-item">
+                            <a target="_blank" href="https://www.linkedin.com/company/bank-of-georgia" class="social-media-link">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="store-links-list">
+                        <li class="store-link-item">
+                            <a target="_blank" href="https://play.google.com/store/apps/details?id=ge.bog.mobilebank" class="store-link">
+                                <img src="./../images/google-play.svg" class="store-image">
+                            </a>
+                        </li>
+                        <li class="store-link-item">
+                            <a target="_blank" href="https://itunes.apple.com/us/app/bog-mbank-mobile-banking/id1159368231?mt=8" class="store-link">
+                                <img src="./../images/app-store.svg" class="store-image">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-container">
+            <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./../images/carousel_image_1.jpg" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./../images/carousel_image_2.png" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./../images/carousel_image_3.png" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./../images/carousel_image_4.png" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./../images/carousel_image_5.png" class="d-block w-100">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/862b682ea5.js" crossorigin="anonymous"></script>
+    <script src="./../scripts/buttons.js"></script>
+    <script src="./../scripts/app.js"></script>
+</body>
+</html>

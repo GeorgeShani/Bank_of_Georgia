@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Georgian:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="shortcut icon" href="./../images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./../styles/style.css">
+    <title>About Us | Bank of Georgia | JavaScript Project by Giorgi Shanidze</title>
+</head>
+<body>
+    <header>
+        <nav class="bog-navbar">
+            <div class="burger-menu">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <div class="logo-container">
+                <a href="./../index.html">
+                    <img src="./../images/logo.svg" class="BOG-logo">
+                </a>
+            </div>
+            <div class="navigation-links-container">
+                <ul class="nav-links-list">
+                    <li class="nav-link-item">
+                        <a href="./../index.html" class="nav-link">მთავარი</a>
+                    </li>
+                    <li class="nav-link-item">
+                        <a href="./currencies.html" class="nav-link">ვალუტის კურსები</a>
+                    </li>
+                    <li class="nav-link-item">
+                        <a href="./convert.html" class="nav-link">ვალუტის კონვერტაცია</a>
+                    </li>
+                    <li class="nav-link-item">
+                        <a href="./loan.html" class="nav-link">სესხის კალკულატორი</a>
+                    </li>
+                    <li class="nav-link-item">
+                        <a href="./about.html" class="nav-link">ჩვენს შესახებ</a>
+                    </li>
+                </ul>
+                <div class="logo-on-nav-bar">
+                    <img src="./../images/logo.svg" alt="">
+                    <p id="copy-info-nav-bar"></p>
+                </div>
+            </div>
+            <div class="log-in-button-container">
+                <button class="log-in-btn" onclick="goToLoginPage()" type="button">შესვლა</button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="about-paragraph-1">
+            <div class="text-container">
+                <h3>საქართველოს ბანკი დღეს</h3>
+                <p>1994 წლიდან, საქართველოს ბანკი ავითარებს საცალო და პერსონალური ბანკინგის მიმართულების პროდუქტებს და სერვისებს, რომლითაც დღეისათვის 1.6 მილიონზე მეტი აქტიური მომხმარებელი სარგებლობს. საამაყო და ამავდროულად საპასუხისმგებლო სახელის ქვეშ, საქართველოს ბანკი დღეს 7 ათასამდე თანამშრომელს აერთიანებს.</p>
+                <p>წლების განმავლობაში, კომპანია ლიდერი ბანკის სტატუსს ფლობს, როგორც ფინანსური მაჩვენებლებით, ისე მოსახლეობის აღქმაში.</p>
+            </div>
+            <div class="image-container">
+                <img src="./../images/bank-main-office.jpg" alt="">
+            </div>
+        </div>
+        <div class="about-paragraph-2">
+            <div class="text-container">
+                <h3>ბანკის მისია</h3>
+                <p>ადამიანების ცხოვრება განსხვავებული ეტაპებისგან შედგება, თითოეული ეს ეტაპი კი  უამრავ მოლოდინსა და სურვილს აერთიანებს. ჩვენ ვპოულობთ ადამიანებთან შეხების წერტილებს, ვითვალისწინებთ სხვადასხვა სეგმენტების განვითარების ეტაპებს და ვქმნით ინსტრუმენტებსა და შესაძლებლობებს, რომლებიც ემსახურება სურვილებისა და საჭიროებების სრულყოფას.
+                </p>
+                <p>ჩვენი, როგორც მუდმივად განვითარებადი, სხვებისთვის გზის გამკვალავი და მაგალითის მიმცემი ფინანსური ინსტიტუტის მისიაა ხელი შევუწყოთ იმ ადამიანთა პოტენციალის რეალიზებას, რომლებიც ქმნიან უკეთეს საქართველოს.</p>
+            </div>
+            <div class="image-container">
+                <img src="./../images/bank-mission.jpg" alt="">
+            </div>
+        </div>
+        <div class="about-paragraph-3">
+            <div class="text-container">
+                <h3>მიზანი და დაპირება</h3>
+                <p>საქართველოს ბანკი ყველასთვისაა და ემსახურება მთელი საქართველოს მოსახლეობას; განსაკუთრებით ღირებული კი ჩვენთვის სოციალური საჭიროებები და ადამიანური წარმატებაა.
+                </p>
+                <p>ამ ადამიანური წარმატების უკან თითოეული ინდივიდის დაუღალავი შრომა და თავდადება დგას. ჩვენ ყველა ნაბიჯზე ვგულშემატკივრობთ მათ და ჩვენი ხელშეწყობით ვმატებთ გამბედაობას, რომ შესაძლებლობები რეალობად აქციონ.
+                </p>
+                <p>შედეგად კი გვსურს იმოძრაონ და იმოქმედონ, რადგან მხოლოდ მოძრაობა და მოქმედება ეხმარება ადამიანს, შეძლოს საკუთარი პოტენციალის რეალიზება.</p>
+            </div>
+            <div class="image-container">
+                <img src="./../images/bank-purpouse.jpg" alt="">
+            </div>
+        </div>
+        <div class="directions">
+            <div class="directions-title">
+                <h3>მიმართულებები</h3>
+            </div>
+            <div class="directions-list">
+                <div class="direction">
+                    <div class="direction-image">
+                        <img src="./../images/direction-1.svg" alt="">
+                    </div>
+                    <div class="direction-info">
+                        <h4>ფიზიკური პირების მომსახურება</h4>
+                        <p>მეტი ურთიერთობა მომხმარებელთან</p>
+                    </div>
+                </div>
+                <div class="direction">
+                    <div class="direction-image">
+                        <img src="./../images/direction-2.svg" alt="">
+                    </div>
+                    <div class="direction-info">
+                        <h4>საქართველოს ბანკი ბიზნესი</h4>
+                        <p>ბიზნესზე მორგებული მომსახურება</p>
+                    </div>
+                </div>
+                <div class="direction">
+                    <div class="direction-image">
+                        <img src="./../images/direction-3.svg" alt="">
+                    </div>
+                    <div class="direction-info">
+                        <h4>SOLO</h4>
+                        <p>პრივილეგირებული საბანკო მომსახურება</p>
+                    </div>
+                </div>
+                <div class="direction">
+                    <div class="direction-image">
+                        <img src="./../images/direction-4.svg" alt="">
+                    </div>
+                    <div class="direction-info">
+                        <h4>Wealth Management</h4>
+                        <p>დაგროვილი ქონების მართვა</p>
+                    </div>
+                </div>
+                <div class="direction">
+                    <div class="direction-image">
+                        <img src="./../images/direction-5.svg" alt="">
+                    </div>
+                    <div class="direction-info">
+                        <h4>Fintech</h4>
+                        <p>ღია საბანკო მომსახურება</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="child-companies">
+            <div class="container-title">
+                <h3>შვილობილი კომპანიები</h3>
+            </div>
+            <div class="companies-list">
+                <div class="child-company">
+                    <div class="company-image">
+                        <img src="./../images/child-company-1.svg" alt="">
+                    </div>
+                    <div class="company-name">
+                        <h4>გალტ & თაგარტი</h4>
+                    </div>
+                </div>
+                <div class="child-company">
+                    <div class="company-image">
+                        <img src="./../images/child-company-2.svg" alt="">
+                    </div>
+                    <div class="company-name">
+                        <h4>საქართველოს ბანკის წარმომადგენლობა უნგრეთში</h4>
+                    </div>
+                </div>
+                <div class="child-company">
+                    <div class="company-image">
+                        <img src="./../images/child-company-3.svg" alt="">
+                    </div>
+                    <div class="company-name">
+                        <h4>ბანკი ბელარუსში (BNB)</h4>
+                    </div>
+                </div>
+                <div class="child-company">
+                    <div class="company-image">
+                        <img src="./../images/child-company-4.svg" alt="">
+                    </div>
+                    <div class="company-name">
+                        <h4>საქართველოს ბანკის პარტნიორი ისრაელში (GFI)</h4>
+                    </div>
+                </div>
+                <div class="child-company">
+                    <div class="company-image">
+                        <img src="./../images/child-company-5.svg" alt="">
+                    </div>
+                    <div class="company-name">
+                        <h4>საქართველოს ბანკის წარმომადგენლობითი ოფისი დიდ ბრიტანეთში</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="social-media-links">
+            <h3 class="title">დაგვიკავშირდი</h3>
+            <ul class="social-media-links-list">
+                <li class="social-media-link-item">
+                    <a target="_blank" href="https://www.facebook.com/BankOfGeorgia/" class="social-media-link">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                </li>
+                <li class="social-media-link-item">
+                    <a target="_blank" href="https://www.youtube.com/user/BankofGeorgiaTV" class="social-media-link">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </li>
+                <li class="social-media-link-item">
+                    <a target="_blank" href="https://www.instagram.com/bankofgeorgia/" class="social-media-link">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+                <li class="social-media-link-item">
+                    <a target="_blank" href="https://www.linkedin.com/company/bank-of-georgia/" class="social-media-link">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="contacts">
+            <p class="phone-contact"><a href="tel:+99532444444">(0 32) 444 444</a></p>
+            <p class="email-contact"><a href="mailto:customerservice@bog.ge">customerservice@bog.ge</a></p>
+        </div>
+        <div class="other-links">
+            <div class="store-links">
+                <h3 class="title">გადმოწერე მობილბანკი</h3>
+                <div class="store-link-items">
+                    <a class="store-link" target="_blank" href="https://play.google.com/store/apps/details?id=ge.bog.mobilebank">
+                        <img src="./../images/google-play.svg" alt="">
+                    </a>
+                    <a class="store-link" target="_blank" href="https://apps.apple.com/us/app/bank-of-georgia/id1159368231">
+                        <img src="./../images/app-store.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="subscription">
+                <h3 class="title">სიახლეების გამოწერა</h3>
+                <div class="email-input-container">
+                    <input type="email" id="email-input" placeholder="ელ-ფოსტა">
+                    <button type="button" id="subscribe-btn" onclick="displaySubscriptionMessage()">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </div>
+                <p id="subscription-message"></p>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="logo">
+                <img src="./../images/logo.svg">
+            </div>
+            <div class="copyright-info-container">
+                <p id="copyright-info"></p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/862b682ea5.js" crossorigin="anonymous"></script>
+    <script src="./../scripts/buttons.js"></script>
+    <script src="./../scripts/app.js"></script>
+</body>
+</html>
